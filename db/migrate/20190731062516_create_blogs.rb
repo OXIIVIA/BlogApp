@@ -1,7 +1,9 @@
 class CreateBlogs < ActiveRecord::Migration[5.0]
   def change
     create_table :blogs do |t|
-      t.text :message, null: :false
+      t.string :title,      null: false
+      t.text :text,         null: false
+      t.references :user,   foreign_key: true
       t.timestamps
     end
   end
