@@ -1,0 +1,56 @@
+.header {
+  height: 70px;
+  width: 100vw;
+  padding: 0 40px;
+  background-color: $green;
+  display: flex;
+  justify-content: space-between;
+  &__title {
+    color: $white;
+    font-size: 24px;
+    font-weight: bold;
+    line-height: 70px;
+    text-align: center;
+  }
+  &__links {
+    line-height: 70px;
+    &__btn {
+      padding: 0 10px;
+      @include button-style;
+    }
+  }
+}
+
+.main {
+  padding: 50px 200px;
+}
+
+.blog {
+  width: 100%;
+  padding: 30px 0;
+  border-bottom: 2px solid $green;
+  &__title {
+    margin-bottom: 10px;
+    font-size: 20px;
+    font-weight: bold;
+  }
+  &__info {
+    font-size: 12px;
+    margin-bottom: 30px;
+  }
+  &__text {
+    font-size: 16px;
+    margin-bottom: 30px;
+  }
+  &__links {
+    text-align :right;
+    font-size: 14px;
+    &__btn {
+      background-color: $green;
+      padding: 5px 20px;
+      margin-right: 5px;
+      border-radius: 2px;
+      @include button-style;
+    }
+  }
+}

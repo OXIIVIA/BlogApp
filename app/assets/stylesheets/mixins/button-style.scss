@@ -1,0 +1,10 @@
+@mixin button-style {
+  display: inline-block;
+  text-decoration: none;
+  &:visited {
+    color: white;
+  }
+  &:hover {
+    background-color: #37b88b;
+  }
+}

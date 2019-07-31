@@ -1,0 +1,12 @@
+- @blogs.each do |blog|
+  .blog
+    %p.blog__title
+      = blog.title
+    %p.blog__info
+      = "#{blog.created_at.strftime("%Y/%m/%d %H:%M")} #{blog.user.nickname}"
+    %p.blog__text
+      - omitted_text = blog.text.truncate(300)
+      = safe_join(omitted_text.split("\n"), tag(:br))
+    .blog__links
+      =link_to "/", class: "blog__links__btn" do
+        詳細
