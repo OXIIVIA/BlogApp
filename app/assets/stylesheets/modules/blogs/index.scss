@@ -6,11 +6,13 @@
   display: flex;
   justify-content: space-between;
   &__title {
+    display: block;
     color: $white;
     font-size: 24px;
     font-weight: bold;
     line-height: 70px;
     text-align: center;
+    text-decoration: none;
   }
   &__links {
     line-height: 70px;
@@ -22,7 +24,9 @@
 }
 
 .main {
+  height: calc(100vh - 70px);
   padding: 50px 200px;
+  overflow: scroll;
 }
 
 .blog {

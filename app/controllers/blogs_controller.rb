@@ -18,6 +18,18 @@ class BlogsController < ApplicationController
     @blog = Blog.find(params[:id])
   end
 
+  def edit
+    @blog = Blog.find(params[:id])
+  end
+
+  def update
+    blog = Blog.find(params[:id])
+    if blog.user_id == current_user.id
+      blog.update(blog_params) 
+      redirect_to blog_path(blog.id)
+    end
+  end
+
   private
 
   def blog_params
