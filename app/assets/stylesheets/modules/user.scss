@@ -1,12 +1,6 @@
 .account-page {
   .account-page__inner {
-    width: 980px;
-    margin: 60px auto;
     padding: 60px;
-    background-color: #fff;
-    border: 1px solid #ddd;
-    border-radius: 5px;
-
     .account-page__inner--left, .account-page__inner--right {
       float: left;
       width: 50%;
@@ -26,20 +20,13 @@
       font-weight: 200;
 
       &:after {
-        content: '';
+        content: "";
         display: block;
-        width: 60px;
+        width: 220px;
         margin-top: 5px;
-        border-bottom: 1px solid #38aef0;
+        border-bottom: 2px solid $green;
       }
     }
-
-    h5 {
-      margin-bottom: 20px;
-      font-size: 14px;
-      font-weight: 200;
-    }
-
     .btn {
       margin-top: 20px;
       color: #fff;
@@ -86,7 +73,7 @@
     float: left;
     margin-top: 20px;
     color: #fff;
-    background-color: #38aef0;
+    background-color: $green;
   }
 
   .field-label {
