@@ -7,20 +7,6 @@
     = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload'
     = javascript_include_tag 'application', 'data-turbolinks-track': 'reload'
   %body
-    .header
-      %p.header__title BlogApp
-      .header__links
-        -if user_signed_in?
-          =link_to edit_user_path(current_user), class: "header__links__btn" do
-            ユーザー設定
-          =link_to destroy_user_session_path, method: :delete, class: "header__links__btn" do
-            ログアウト
-          =link_to new_blog_path, class: "header__links__btn" do
-            ブログを書く
-        -else
-          =link_to new_user_registration_path, class: "header__links__btn" do
-            サインアップ
-          =link_to new_user_session_path, class: "header__links__btn" do
-            ログイン
+    =render partial: "layouts/shared/header"
     .main
       = yield
