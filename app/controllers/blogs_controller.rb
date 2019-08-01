@@ -8,9 +8,14 @@ class BlogsController < ApplicationController
   end
 
   def create
-    if Blog.create(blog_params)
+    if blog_params[:title].empty? || blog_params[:text].empty?
+      @blog = Blog.new
+      flash[:notice] = "タイトルと本文はともに入力必須です"
+      render :new
+    else
+      Blog.create(blog_params)
+      flash[:alert] = "ブログを投稿しました"
       redirect_to root_path
-      # アラートを表示
     end
   end
 
@@ -25,7 +30,8 @@ class BlogsController < ApplicationController
   def update
     blog = Blog.find(params[:id])
     if blog.user_id == current_user.id
-      blog.update(blog_params) 
+      blog.update(blog_params)
+      flash[:alert] = "ブログを更新しました"
       redirect_to blog_path(blog.id)
     end
   end
@@ -33,6 +39,7 @@ class BlogsController < ApplicationController
   def destroy
     blog = Blog.find(params[:id])
     blog.destroy if blog.user_id == current_user.id
+    flash[:alert] = "ブログを削除しました"
     redirect_to root_path
   end
 
