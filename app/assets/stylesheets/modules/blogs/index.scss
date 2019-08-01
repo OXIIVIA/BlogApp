@@ -4,7 +4,8 @@
   padding: 0 40px;
   background-color: $green;
   display: flex;
-  justify-content: space-between;
+  // justify-content: space-between;
+  justify-content: flex-start;
   &__title {
     display: block;
     color: $white;
@@ -16,10 +17,22 @@
   }
   &__links {
     line-height: 70px;
+    position: relative;
+    margin-left: auto;
     &__btn {
       padding: 0 10px;
       @include button-style;
     }
+  }
+}
+
+.fa-bars {
+  &:hover {
+  cursor: pointer;
+  }
+  &::before {
+  line-height: 70px;
+  color: $white;
   }
 }
 
