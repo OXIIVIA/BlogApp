@@ -16,17 +16,21 @@
     text-decoration: none;
   }
   &__links {
+    line-height: 70px;
+    margin-left: auto;
+    display: none;
     &__name {
       padding: 0 10px;
       display: inline-block;
       color: $white;
     }
-    line-height: 70px;
-    margin-left: auto;
-    display: none;
     &__btn {
       padding: 0 10px;
       @include button-style;
+    }
+    &__form {
+      display: inline-block;
+      margin: 0 30px;
     }
     &__back {
       padding: 0 10px;
@@ -51,6 +55,15 @@
     color: $white;
   }
 }
+
+.fa-search {
+  margin-right: 5px;
+  &::before {
+    color: $white;
+  }
+}
+
+
 
 .flash-alert {
   @include flash;
