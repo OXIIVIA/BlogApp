@@ -25,12 +25,12 @@
 
 .flash-alert {
   @include flash;
-  background-color: $green;
+  background-color: #f56e6e;
 }
 
 .flash-notice {
   @include flash;
-  background-color: #f56e6e;
+  background-color: $green;
 }
 
 .main {
