@@ -2,13 +2,18 @@ $(document).on('turbolinks:load', function() {
 
   $('#nickname-form').on('keyup', function() {
     var input = $(this).val();
-    
+    $.ajax({
+      type: 'GET',
+      url: '/users',
+      data: {keyword: input},
+      dataType: 'json'
+    })
 
 
 
 
 
-    
+
   });
 
 
