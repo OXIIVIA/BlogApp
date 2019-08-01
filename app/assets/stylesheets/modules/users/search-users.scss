@@ -1,0 +1,10 @@
+.blog-user {
+  width: 50%;
+  margin: 0 auto;
+  border-bottom: 2px solid $green;
+  margin-bottom: 20px;
+  &__nickname {
+    padding: 20px 0;
+    font-size: 20px;
+  }
+}

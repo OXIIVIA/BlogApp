@@ -21,6 +21,9 @@
         サインアップ
       =link_to new_user_session_path, class: "header__links__btn" do
         ログイン
+      .header__links__form
+        =fa_icon "search", class: ".header__links__form--image"
+        =text_field_tag "nickname-form", "", class: ".header__links__form--box", placeholder: "ユーザーを検索"
       %p.header__links__back 戻る
   .header__icon
     = fa_icon "bars", class: "fa-2x"
