@@ -23,6 +23,16 @@
   }
 }
 
+.flash-alert {
+  @include flash;
+  background-color: $green;
+}
+
+.flash-notice {
+  @include flash;
+  background-color: #f56e6e;
+}
+
 .main {
   height: calc(100vh - 70px);
   padding: 50px 200px;
