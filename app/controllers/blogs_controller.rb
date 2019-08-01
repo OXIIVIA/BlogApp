@@ -30,6 +30,12 @@ class BlogsController < ApplicationController
     end
   end
 
+  def destroy
+    blog = Blog.find(params[:id])
+    blog.destroy if blog.user_id == current_user.id
+    redirect_to root_path
+  end
+
   private
 
   def blog_params

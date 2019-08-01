@@ -9,8 +9,8 @@
       =link_to root_path, class: "blog__links__btn" do
         トップページに戻る
       - if current_user != nil && @blog.user.id == current_user.id
-        =link_to edit_blog_path, class: "blog__links__btn" do
+        =link_to edit_blog_path(@blog.id), class: "blog__links__btn" do
           編集
-        =link_to "/", class: "blog__links__btn" do
+        =link_to blog_path(@blog.id), method: :delete, class: "blog__links__btn" do
           削除
       
