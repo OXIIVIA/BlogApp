@@ -8,5 +8,11 @@
     = javascript_include_tag 'application', 'data-turbolinks-track': 'reload'
   %body
     =render partial: "layouts/shared/header"
-    .main
+    .main         
+      -if flash[:alert]
+        %p.flash-alert
+          = flash[:alert]
+      -if flash[:notice]
+        %p.flash-notice
+          = flash[:notice]
       = yield
