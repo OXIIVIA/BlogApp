@@ -5,6 +5,7 @@
   background-color: $green;
   display: flex;
   justify-content: space-between;
+  // justify-content: flex-start;
   &__title {
     display: block;
     color: $white;
@@ -15,11 +16,39 @@
     text-decoration: none;
   }
   &__links {
+    &__name {
+      padding: 0 10px;
+      display: inline-block;
+      color: $white;
+    }
     line-height: 70px;
+    margin-left: auto;
+    display: none;
     &__btn {
       padding: 0 10px;
       @include button-style;
     }
+    &__back {
+      padding: 0 10px;
+      display: inline-block;
+      color: $white;
+      &:hover {
+        background-color: #37b88b;
+      }
+    }
+  }
+  %__icon {
+    display: block;
+  }
+}
+
+.fa-bars {
+  &:hover {
+  cursor: pointer;
+  }
+  &::before {
+    line-height: 70px;
+    color: $white;
   }
 }
 
